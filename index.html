@@ -1,0 +1,35 @@
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محل منتجات الألبان</title>
+</head>
+<body>
+
+<h1>مرحبًا في محل منتجات الألبان</h1>
+
+<ul id="product-list"></ul>
+
+<script>
+    // قائمة المنتجات والأسعار
+    const products = [
+        { name: 'حليب', price: 10 },
+        { name: 'زبدة', price: 5 },
+        { name: 'جبن', price: 15 },
+        // يمكنك إضافة المزيد من المنتجات هنا
+    ];
+
+    // عرض المنتجات في الصفحة
+    const productList = document.getElementById('product-list');
+    products.forEach(product => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${product.name}: ${product.price} جنيه`;
+        productList.appendChild(listItem);
+    });
+</script>
+
+</body>
+</html>
